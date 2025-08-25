@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Map from './Map';
+import type { ShawarmaLocation } from '@/types';
 
 // Sample shawarma locations (replace with real data later)
 const sampleLocations = [
@@ -35,7 +36,7 @@ const sampleLocations = [
 ];
 
 export default function ShawarMapClient() {
-  const [selectedLocation, setSelectedLocation] = useState<any>(null);
+  const [selectedLocation, setSelectedLocation] = useState<ShawarmaLocation | null>(null);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

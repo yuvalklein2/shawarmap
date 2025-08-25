@@ -2,16 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
-
-interface ShawarmaLocation {
-  id: string;
-  name: string;
-  lat: number;
-  lng: number;
-  address: string;
-  rating: number;
-  reviews: number;
-}
+import type { ShawarmaLocation } from '@/types';
 
 interface MapProps {
   locations: ShawarmaLocation[];
