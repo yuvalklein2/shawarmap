@@ -1,5 +1,5 @@
-import ShawarMapClient from '@/components/ShawarMapClient';
+import HebrewShawarMapClient from '@/components/HebrewShawarMapClient';
 
 export default function Home() {
-  return <ShawarMapClient />;
+  return <HebrewShawarMapClient />;
 }

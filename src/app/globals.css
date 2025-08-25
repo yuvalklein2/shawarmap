@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap');
 
 :root {
   /* ShawarMap Brand Colors */
@@ -25,7 +26,7 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Assistant', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background: var(--secondary);
   color: var(--text-primary);
   margin: 0;
@@ -33,6 +34,45 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .space-x-reverse > * + * {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .space-x-2.space-x-reverse > * + * {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .space-x-3.space-x-reverse > * + * {
+  margin-right: 0.75rem;
+  margin-left: 0;
+}
+
+/* Hebrew text improvements */
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+[dir="rtl"] .text-right {
+  text-align: right;
+}
+
+[dir="rtl"] .justify-start {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .justify-end {
+  justify-content: flex-end;
 }
 
 /* Custom scrollbar */
